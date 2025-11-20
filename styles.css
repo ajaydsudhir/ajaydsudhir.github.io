@@ -22,8 +22,8 @@
     
     /* UI Elements */
     --navbar-bg: rgba(0, 0, 0, 0.95);
-    --card-bg: #000000;
-    --card-border: rgba(59, 130, 246, 0.15);
+    --card-bg: rgba(0, 0, 0, 0.2);
+    --card-border: rgba(59, 130, 246, 0.2);
     --glass-bg: rgba(148, 163, 184, 0.15);
     
     /* Typography */
@@ -67,8 +67,8 @@
     
     /* UI Elements */
     --navbar-bg: rgba(255, 255, 255, 0.95);
-    --card-bg: #FFFFFF;
-    --card-border: rgba(0, 0, 0, 0.08);
+    --card-bg: rgba(255, 255, 255, 0.2);
+    --card-border: rgba(0, 0, 0, 0.15);
     --glass-bg: rgba(255, 255, 255, 0.7);
 }
 
@@ -667,18 +667,18 @@ a {
 
 /* ================== About Section ================== */
 .about-section {
-    background: var(--color-secondary);
+    background: transparent;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
     .about-content {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -689,7 +689,30 @@ a {
     margin-bottom: 2rem;
     padding: 1.5rem;
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
+    border-radius: var(--radius-md);
+}
+
+.about-intro-section {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-intro {
+    font-size: clamp(1.125rem, 1.75vw, 1.375rem);
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
     border-radius: var(--radius-md);
 }
 
@@ -699,25 +722,97 @@ a {
 }
 
 .education-item p {
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
 }
 
-.education-item p:first-child {
-    margin-top: 0;
+.education-degree {
+    font-size: 1.2rem !important;
+    color: var(--color-accent-blue);
+    margin-top: 0 !important;
+}
+
+[data-theme="light"] .education-degree {
+    color: var(--color-accent-red);
+}
+
+.education-details, .education-university, .education-graduation {
+    font-size: 1.05rem;
+}
+
+.education-honors {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--card-border);
+    font-style: italic;
+}
+
+/* Fun Facts Section */
+.fun-facts-section {
+    margin-top: 2rem;
+}
+
+.fun-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.fun-fact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.fun-fact-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-blue);
+    box-shadow: 0 10px 25px var(--color-shadow);
+}
+
+[data-theme="light"] .fun-fact-item:hover {
+    border-color: var(--color-accent-red);
+}
+
+.fun-fact-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.fun-fact-content h4 {
     font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent-blue);
 }
 
-.education-item p:last-child {
-    margin-bottom: 0;
-    color: var(--color-text-muted);
+[data-theme="light"] .fun-fact-content h4 {
+    color: var(--color-accent-red);
+}
+
+.fun-fact-content p {
     font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--color-text-muted);
 }
 
-.about-intro {
-    font-size: clamp(1.125rem, 1.75vw, 1.375rem);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+@media (max-width: 768px) {
+    .fun-facts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-intro {
+        padding: 1.5rem;
+    }
 }
 
 .about-description,
@@ -740,7 +835,9 @@ a {
     gap: 1rem;
     padding: 1.25rem;
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
     border-radius: var(--radius-md);
     transition: all var(--transition-base);
     list-style: none;
@@ -761,6 +858,33 @@ a {
     border-color: var(--color-accent-red);
 }
 
+.research-interests {
+    padding: 2rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
+    border-radius: var(--radius-md);
+}
+
+@media (max-width: 768px) {
+    .interest-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 1rem;
+    }
+    
+    .interest-item:hover {
+        transform: translateY(-5px) translateX(0);
+    }
+    
+    .interest-icon {
+        align-self: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
 /* ================== Skills Section ================== */
 .skills-grid {
     display: grid;
@@ -777,7 +901,9 @@ a {
 
 .skill-category {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
     border-radius: var(--radius-lg);
     padding: 2rem;
     transition: all var(--transition-base);
@@ -855,7 +981,7 @@ a {
 
 /* ================== Projects Section ================== */
 .projects-section {
-    background: var(--color-secondary);
+    background: transparent;
 }
 
 .projects-grid {
@@ -873,7 +999,9 @@ a {
 
 .project-card {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-base);
@@ -993,7 +1121,9 @@ a {
 
 .research-card {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-base);
@@ -1011,7 +1141,7 @@ a {
 
 /* ================== Publications Section ================== */
 .publications-section {
-    background: var(--color-secondary);
+    background: transparent;
 }
 
 .publications-grid {
@@ -1029,7 +1159,9 @@ a {
 
 .publication-card {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
     border-radius: var(--radius-lg);
     padding: 2rem;
     transition: all var(--transition-base);
@@ -1135,7 +1267,7 @@ a {
 
 /* ================== Blog Section ================== */
 .blog-section {
-    background: var(--color-secondary);
+    background: transparent;
 }
 
 .blog-grid {
@@ -1153,7 +1285,9 @@ a {
 
 .blog-card {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--card-border);
     border-radius: var(--radius-lg);
     padding: 2rem;
     transition: all var(--transition-base);
@@ -1289,108 +1423,45 @@ a {
 .ticker-wrapper {
     display: flex;
     width: 100%;
-}
-
-.ticker-content {
-    display: flex;
-    gap: 4rem;
-    animation: scroll 30s linear infinite;
-    will-change: transform;
-}
-
-.ticker-content[aria-hidden="true"] {
-    position: absolute;
-    animation: scroll 30s linear infinite;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.ticker-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    white-space: nowrap;
-    color: var(--color-text-muted);
-    font-family: var(--font-ui);
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.ticker-item svg {
-    color: var(--color-accent-blue);
-    flex-shrink: 0;
-}
-
-[data-theme="light"] .ticker-item svg {
-    color: var(--color-accent-red);
-}
-
-/* ================== Organizations Ticker ================== */
-.organizations-ticker {
-    background: rgba(59, 130, 246, 0.03);
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
-    padding: 1.5rem 0;
-    overflow: hidden;
     position: relative;
-}
-
-[data-theme="light"] .organizations-ticker {
-    background: rgba(214, 69, 69, 0.03);
-}
-
-.organizations-ticker::before,
-.organizations-ticker::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.organizations-ticker::before {
-    left: 0;
-    background: linear-gradient(to right, var(--color-primary), transparent);
-}
-
-.organizations-ticker::after {
-    right: 0;
-    background: linear-gradient(to left, var(--color-primary), transparent);
-}
-
-.ticker-wrapper {
-    display: flex;
-    width: 100%;
+    overflow: hidden;
 }
 
 .ticker-content {
     display: flex;
     gap: 4rem;
-    animation: scroll 30s linear infinite;
+    padding-right: 4rem;
+    animation: scroll 60s linear infinite;
     will-change: transform;
+    flex-shrink: 0;
+    min-width: 100%;
 }
 
 .ticker-content[aria-hidden="true"] {
     position: absolute;
-    animation: scroll 30s linear infinite;
+    left: 0;
+    top: 0;
+    animation: scroll 60s linear infinite;
+    flex-shrink: 0;
+    min-width: 100%;
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
     100% {
         transform: translateX(-100%);
     }
+}
+
+/* Ensure smooth continuous scrolling */
+.ticker-wrapper {
+    animation-play-state: running;
+}
+
+.organizations-ticker:hover .ticker-content {
+    animation-play-state: paused;
 }
 
 .ticker-item {
@@ -1402,6 +1473,27 @@ a {
     font-family: var(--font-ui);
     font-weight: 500;
     font-size: 1rem;
+}
+
+.ticker-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter var(--transition-base);
+}
+
+.ticker-item:hover .ticker-logo {
+    filter: grayscale(0%) brightness(1);
+}
+
+[data-theme="light"] .ticker-logo {
+    filter: grayscale(100%) brightness(0.6);
+}
+
+[data-theme="light"] .ticker-item:hover .ticker-logo {
+    filter: grayscale(0%) brightness(1);
 }
 
 .ticker-item svg {

@@ -318,24 +318,108 @@ class ProjectsManager {
 
     async fetchGitHubProjects() {
         try {
-            const response = await fetch('https://api.github.com/users/ajaydsudhir/repos?sort=updated&per_page=6');
-            const repos = await response.json();
+            // Fetch pinned repositories using GraphQL API
+            const query = `
+                query {
+                    user(login: "ajaydsudhir") {
+                        pinnedItems(first: 6, types: REPOSITORY) {
+                            nodes {
+                                ... on Repository {
+                                    name
+                                    description
+                                    url
+                                    homepageUrl
+                                    primaryLanguage {
+                                        name
+                                    }
+                                    repositoryTopics(first: 10) {
+                                        nodes {
+                                            topic {
+                                                name
+                                            }
+                                        }
+                                    }
+                                    owner {
+                                        login
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            `;
             
-            this.projects = repos
-                .filter(repo => !repo.fork && repo.description)
-                .slice(0, 6)
-                .map(repo => ({
+            const response = await fetch('https://api.github.com/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query })
+            });
+            
+            if (!response.ok) {
+                throw new Error('GraphQL query failed, falling back to REST API');
+            }
+            
+            const data = await response.json();
+            
+            if (data.data && data.data.user && data.data.user.pinnedItems.nodes.length > 0) {
+                this.projects = data.data.user.pinnedItems.nodes.map(repo => ({
                     title: repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
                     description: repo.description || 'No description available',
-                    tech: this.extractTechStack(repo),
-                    github: repo.html_url,
-                    demo: repo.homepage || null,
-                    image: `https://opengraph.githubassets.com/1/${repo.full_name}`
+                    tech: this.extractTechStackFromGraphQL(repo),
+                    github: repo.url,
+                    demo: repo.homepageUrl || null,
+                    image: `https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}`
                 }));
+            } else {
+                throw new Error('No pinned repositories found');
+            }
         } catch (error) {
-            console.error('Error fetching GitHub projects:', error);
-            this.projects = this.getDefaultProjects();
+            console.log('Fetching pinned repos via GraphQL failed, trying REST API fallback:', error);
+            // Fallback to REST API - get all repos and filter by topics or stars
+            try {
+                const response = await fetch('https://api.github.com/users/ajaydsudhir/repos?sort=updated&per_page=100');
+                const repos = await response.json();
+                
+                // Filter for most important repos (with topics, stars, or recent activity)
+                this.projects = repos
+                    .filter(repo => !repo.fork && repo.description)
+                    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+                    .slice(0, 6)
+                    .map(repo => ({
+                        title: repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+                        description: repo.description || 'No description available',
+                        tech: this.extractTechStack(repo),
+                        github: repo.html_url,
+                        demo: repo.homepage || null,
+                        image: `https://opengraph.githubassets.com/1/${repo.full_name}`
+                    }));
+            } catch (fallbackError) {
+                console.error('Error fetching GitHub projects:', fallbackError);
+                this.projects = this.getDefaultProjects();
+            }
         }
+    }
+
+    extractTechStackFromGraphQL(repo) {
+        const tech = [];
+        if (repo.primaryLanguage && repo.primaryLanguage.name) {
+            tech.push(repo.primaryLanguage.name);
+        }
+        
+        // Add topics
+        if (repo.repositoryTopics && repo.repositoryTopics.nodes) {
+            const commonTech = ['pytorch', 'tensorflow', 'react', 'python', 'javascript', 'typescript', 'docker', 'nextjs', 'fastapi'];
+            repo.repositoryTopics.nodes.forEach(topicNode => {
+                const topic = topicNode.topic.name.toLowerCase();
+                if (commonTech.includes(topic)) {
+                    tech.push(topicNode.topic.name);
+                }
+            });
+        }
+        
+        return tech.slice(0, 3);
     }
 
     extractTechStack(repo) {
