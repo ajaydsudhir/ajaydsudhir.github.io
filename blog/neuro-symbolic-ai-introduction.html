@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exploring how neuro-symbolic approaches combine the strengths of neural networks and symbolic reasoning to create more interpretable and robust AI systems.">
+    <meta name="keywords" content="AI Research, Neuro-Symbolic, Machine Learning">
+    <meta name="author" content="Ajay D. Sudhir">
+    
+    <title>Understanding Neuro-Symbolic AI - Ajay D. Sudhir</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../blog-post.css">
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">ADS</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <a href="../index.html" class="btn btn-secondary">← Back to Home</a>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <header class="post-header">
+            <div class="container">
+                <div class="post-meta">
+                    <span class="post-date">November 15, 2024</span>
+                    <span class="post-reading-time">8 min read</span>
+                </div>
+                <h1 class="post-title">Understanding Neuro-Symbolic AI: Bridging Logic and Learning</h1>
+                <div class="post-tags">
+                    <span class="post-tag">AI Research</span>
+                    <span class="post-tag">Neuro-Symbolic</span>
+                    <span class="post-tag">Machine Learning</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="post-content">
+            <div class="container">
+                <p>
+                    Artificial Intelligence has seen remarkable progress through deep learning, enabling machines to recognize patterns, understand language, and even generate creative content. However, these neural approaches often struggle with logical reasoning, interpretability, and systematic generalization—areas where symbolic AI traditionally excelled.
+                </p>
+
+                <p>
+                    <strong>Neuro-symbolic AI</strong> represents a paradigm shift that combines the best of both worlds: the learning capabilities of neural networks with the reasoning power of symbolic systems. This integration promises to create AI systems that are not only powerful but also interpretable and trustworthy.
+                </p>
+
+                <h2>The Two Pillars of AI</h2>
+
+                <h3>Neural Networks: Learning from Data</h3>
+                <p>
+                    Neural networks excel at pattern recognition and learning from vast amounts of data. They can:
+                </p>
+                <ul>
+                    <li>Learn complex representations from raw sensory data</li>
+                    <li>Generalize to similar but unseen examples</li>
+                    <li>Handle noise and uncertainty in data</li>
+                    <li>Scale with more data and compute</li>
+                </ul>
+
+                <p>
+                    However, they face challenges with:
+                </p>
+                <ul>
+                    <li>Logical reasoning and systematic composition</li>
+                    <li>Explainability of learned representations</li>
+                    <li>Sample efficiency for rare events</li>
+                    <li>Robustness to distribution shifts</li>
+                </ul>
+
+                <h3>Symbolic AI: Reasoning with Logic</h3>
+                <p>
+                    Symbolic systems operate on explicit representations and rules. Their strengths include:
+                </p>
+                <ul>
+                    <li>Transparent, interpretable reasoning processes</li>
+                    <li>Perfect systematic generalization</li>
+                    <li>Integration of prior knowledge and constraints</li>
+                    <li>Verifiable behavior and guarantees</li>
+                </ul>
+
+                <p>
+                    But they struggle with:
+                </p>
+                <ul>
+                    <li>Learning from raw sensory data</li>
+                    <li>Handling uncertainty and noise</li>
+                    <li>Scaling to complex real-world scenarios</li>
+                    <li>Adapting to new situations automatically</li>
+                </ul>
+
+                <h2>Integration Approaches</h2>
+
+                <p>
+                    Neuro-symbolic AI can be implemented through various integration strategies:
+                </p>
+
+                <h3>1. Symbolic Reasoning on Neural Representations</h3>
+                <p>
+                    Neural networks extract features from data, which are then processed by symbolic reasoning engines. For example:
+                </p>
+                <pre><code>Image → CNN → Object Detections → Logic Rules → Scene Understanding</code></pre>
+
+                <h3>2. Neural Execution of Symbolic Programs</h3>
+                <p>
+                    Symbolic programs guide neural network behavior, enabling compositional learning:
+                </p>
+                <pre><code>Symbolic Program → Neural Module Network → Execution → Output</code></pre>
+
+                <h3>3. Learning Symbolic Rules from Data</h3>
+                <p>
+                    Neural networks discover symbolic relationships that can be extracted as interpretable rules:
+                </p>
+                <pre><code>Training Data → Neural Network → Rule Extraction → Symbolic Knowledge Base</code></pre>
+
+                <h3>4. Joint Neural-Symbolic Optimization</h3>
+                <p>
+                    Both components are trained together, with symbolic constraints guiding neural learning:
+                </p>
+                <pre><code>Loss = Neural_Loss + λ * Symbolic_Constraint_Violation</code></pre>
+
+                <h2>Key Applications</h2>
+
+                <h3>Visual Question Answering</h3>
+                <p>
+                    Combining vision (neural) with reasoning (symbolic) enables answering complex questions about images that require multi-step logical inference.
+                </p>
+
+                <h3>Knowledge Graph Completion</h3>
+                <p>
+                    Neural embeddings learn entity and relation representations, while symbolic rules ensure logical consistency in predictions.
+                </p>
+
+                <h3>Autonomous Systems</h3>
+                <p>
+                    Robots and autonomous agents benefit from neural perception combined with symbolic planning and safety verification.
+                </p>
+
+                <h3>Scientific Discovery</h3>
+                <p>
+                    Neural models discover patterns in experimental data, while symbolic reasoning formulates interpretable scientific hypotheses.
+                </p>
+
+                <h2>Research Challenges</h2>
+
+                <blockquote>
+                    "The greatest challenge in neuro-symbolic AI is not just combining neural and symbolic methods, but creating systems where they genuinely enhance each other's capabilities."
+                </blockquote>
+
+                <p>
+                    Current research is addressing several key challenges:
+                </p>
+
+                <ul>
+                    <li><strong>Representation Learning:</strong> How to learn representations that support both neural processing and symbolic manipulation?</li>
+                    <li><strong>Differentiable Reasoning:</strong> How to make symbolic reasoning differentiable for end-to-end training?</li>
+                    <li><strong>Scalability:</strong> How to scale neuro-symbolic methods to real-world complexity?</li>
+                    <li><strong>Transfer Learning:</strong> How to transfer learned knowledge between neural and symbolic components?</li>
+                </ul>
+
+                <h2>The Path Forward</h2>
+
+                <p>
+                    Neuro-symbolic AI represents more than just a technical integration—it's a fundamental rethinking of how we build intelligent systems. By combining learning and reasoning, we move toward AI that is:
+                </p>
+
+                <ul>
+                    <li><strong>More Capable:</strong> Handling both perception and reasoning tasks</li>
+                    <li><strong>More Interpretable:</strong> Providing explanations for decisions</li>
+                    <li><strong>More Trustworthy:</strong> Ensuring safety through verifiable reasoning</li>
+                    <li><strong>More Efficient:</strong> Learning from less data by incorporating structure</li>
+                </ul>
+
+                <p>
+                    As we continue to push the boundaries of AI research, neuro-symbolic approaches offer a promising path toward systems that truly understand the world—not just through pattern matching, but through genuine reasoning grounded in learned representations.
+                </p>
+
+                <h2>Further Reading</h2>
+
+                <ul>
+                    <li>Garcez, A. d'Avila, et al. "Neural-Symbolic Learning and Reasoning: A Survey and Interpretation." <em>Neuro-Symbolic Artificial Intelligence</em>, 2022.</li>
+                    <li>Kautz, H. "The Third AI Summer: AAAI Robert S. Engelmore Memorial Lecture." <em>AI Magazine</em>, 2022.</li>
+                    <li>Marcus, G. "The Next Decade in AI: Four Steps Towards Robust Artificial Intelligence." <em>arXiv</em>, 2020.</li>
+                </ul>
+
+                <hr>
+
+                <p><em>This blog post introduces the fundamental concepts of neuro-symbolic AI. Stay tuned for future posts where we'll dive deeper into specific implementations and research directions in this exciting field.</em></p>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <div class="container">
+                <div class="author-bio">
+                    <div class="author-info">
+                        <h3>About the Author</h3>
+                        <p>Ajay D. Sudhir is a Computer Science student at UNC Charlotte, researching AI and machine learning with a focus on neuro-symbolic architectures and continual learning. His work explores how intelligent systems can integrate symbolic reasoning with neural learning for more robust and interpretable AI.</p>
+                    </div>
+                    <div class="author-social">
+                        <a href="https://github.com/ajaydsudhir" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/ajaydsudhir" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="mailto:ajaydsudhir@gmail.com">Email</a>
+                    </div>
+                </div>
+                <a href="../index.html#blog" class="btn btn-primary">← Back to All Posts</a>
+            </div>
+        </footer>
+    </article>
+
+    <script src="../script.js"></script>
+</body>
+</html>
