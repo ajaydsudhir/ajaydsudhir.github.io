@@ -34,9 +34,6 @@
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
     
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -45,9 +42,6 @@
     
     /* Border Radius */
     --radius-sm: 0.5rem;
-    --radius-md: 1rem;
-    --radius-lg: 1.5rem;
-    --radius-full: 50%;
 }
 
 /* Light Mode Colors */
@@ -143,12 +137,12 @@ a {
 }
 
 .section-padding {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-sm) 0;
 }
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: var(--spacing-lg) 0;
+        padding: var(--spacing-sm) 0;
     }
 }
 
@@ -568,7 +562,7 @@ a {
     width: 120%;
     height: 120%;
     background: var(--gradient-accent);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     filter: blur(40px);
     opacity: 0.3;
     z-index: -1;
@@ -578,7 +572,7 @@ a {
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     border: 3px solid var(--card-border);
     object-fit: cover;
     aspect-ratio: 1/1;
@@ -617,7 +611,7 @@ a {
     background: var(--gradient-accent);
     opacity: 0.3;
     position: relative;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .neural-connector::before,
@@ -662,7 +656,7 @@ a {
 
 .subsection-title {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* ================== About Section ================== */
@@ -672,32 +666,32 @@ a {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    max-width: 1400px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1rem;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
     .about-content {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 }
 
 .education-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding: 1.5rem;
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
 }
 
 .about-intro-section {
     grid-column: 1 / -1;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
@@ -708,12 +702,12 @@ a {
     color: var(--color-text-muted);
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem;
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
 }
 
 .education-item {
@@ -735,15 +729,8 @@ a {
     color: var(--color-accent-red);
 }
 
-.education-details, .education-university, .education-graduation {
+.education-details, .education-honors, .education-graduation {
     font-size: 1.05rem;
-}
-
-.education-honors {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--card-border);
-    font-style: italic;
 }
 
 /* Fun Facts Section */
@@ -752,7 +739,8 @@ a {
 }
 
 .fun-facts-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
@@ -767,7 +755,7 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     transition: all var(--transition-base);
 }
 
@@ -826,19 +814,19 @@ a {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
 }
 
 .interest-item {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.25rem;
+    padding: 0.75rem;
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     transition: all var(--transition-base);
     list-style: none;
 }
@@ -859,12 +847,14 @@ a {
 }
 
 .research-interests {
-    padding: 2rem;
+    padding: 1.5rem;
+    height: 96%;
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -872,7 +862,7 @@ a {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        padding: 1rem;
+        padding: 0.5rem;
     }
     
     .interest-item:hover {
@@ -904,7 +894,7 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     padding: 2rem;
     transition: all var(--transition-base);
 }
@@ -1002,7 +992,7 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     overflow: hidden;
     transition: all var(--transition-base);
 }
@@ -1109,8 +1099,8 @@ a {
 .research-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 480px) {
@@ -1124,7 +1114,7 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     overflow: hidden;
     transition: all var(--transition-base);
 }
@@ -1162,7 +1152,7 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     padding: 2rem;
     transition: all var(--transition-base);
 }
@@ -1288,7 +1278,7 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--card-border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     padding: 2rem;
     transition: all var(--transition-base);
     position: relative;
@@ -1510,14 +1500,14 @@ a {
     background: var(--color-primary);
     border-top: 3px solid var(--card-border);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
-    padding: 4rem 0 2rem;
+    padding: 2rem 0;
 }
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 @media (max-width: 768px) {
