@@ -494,54 +494,8 @@ class ProjectsManager {
 class ResearchManager {
     constructor() {
         this.researchGrid = document.getElementById('researchGrid');
-        this.research = this.getResearchData();
-        this.init();
-    }
-
-    init() {
-        this.renderResearch();
-    }
-
-    getResearchData() {
-        // Placeholder data - replace with actual research publications
-        return [
-            {
-                title: 'Neuro-Symbolic Learning for Autonomous Systems',
-                description: 'Investigating the integration of symbolic reasoning with neural networks for improved interpretability and generalization in autonomous agent systems.',
-                venue: 'AI Research Conference',
-                year: '2024',
-                link: '#',
-                image: 'assets/research/research-placeholder.jpg'
-            }
-        ];
-    }
-
-    renderResearch() {
-        if (!this.researchGrid) return;
-        
-        this.researchGrid.innerHTML = this.research.map(paper => `
-            <div class="research-card">
-                <div class="research-image-wrapper">
-                    <img src="${paper.image}" alt="${paper.title}" class="research-image" onerror="this.src='assets/research/research-placeholder.jpg'">
-                </div>
-                <div class="research-content">
-                    <h3 class="research-title">${paper.title}</h3>
-                    <p class="research-description">${paper.description}</p>
-                    <div class="research-meta">
-                        <span class="research-venue">${paper.venue}</span>
-                        <span class="research-year">${paper.year}</span>
-                    </div>
-                    <a href="${paper.link}" class="research-link" target="_blank" rel="noopener noreferrer">
-                        Read Paper
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        `).join('');
+        // Research cards are now statically defined in HTML
+        // This class is kept for potential future dynamic functionality
     }
 }
 
@@ -612,6 +566,66 @@ class PerformanceOptimizer {
     }
 }
 
+// ==================== Organizations Ticker ====================
+class OrganizationsTicker {
+    constructor() {
+        this.ticker = document.querySelector('.ticker-content');
+        this.init();
+    }
+
+    init() {
+        if (!this.ticker) return;
+        
+        // Clone the ticker content for seamless infinite scroll
+        const clone = this.ticker.cloneNode(true);
+        this.ticker.parentElement.appendChild(clone);
+    }
+}
+// ==================== Research Card Expansion ====================
+class ResearchExpander {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        // Add click event listeners to all research cards
+        const researchCards = document.querySelectorAll('.research-card');
+        researchCards.forEach(card => {
+            const expandBtn = card.querySelector('.research-expand-btn');
+            const details = card.querySelector('.research-details');
+            const expandText = card.querySelector('.expand-text');
+            
+            if (expandBtn && details) {
+                // Click on button
+                expandBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent card click
+                    this.toggleExpand(card, details, expandBtn, expandText);
+                });
+                
+                // Click anywhere on the card
+                card.addEventListener('click', () => {
+                    this.toggleExpand(card, details, expandBtn, expandText);
+                });
+            }
+        });
+    }
+
+    toggleExpand(card, details, expandBtn, expandText) {
+        const isExpanded = details.classList.contains('expanded');
+        
+        if (isExpanded) {
+            // Collapse
+            details.classList.remove('expanded');
+            expandBtn.classList.remove('expanded');
+            expandText.textContent = 'Read More';
+        } else {
+            // Expand
+            details.classList.add('expanded');
+            expandBtn.classList.add('expanded');
+            expandText.textContent = 'Show Less';
+        }
+    }
+}
 // ==================== Initialize Application ====================
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all managers
@@ -623,6 +637,8 @@ document.addEventListener('DOMContentLoaded', () => {
     new ResearchManager();
     new ProfileImageHandler();
     new PerformanceOptimizer();
+    new OrganizationsTicker();
+    new ResearchExpander();
     
     // Add smooth reveal for hero section
     setTimeout(() => {

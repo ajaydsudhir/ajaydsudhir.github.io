@@ -245,40 +245,78 @@
         <div class="container">
             <h2 class="section-title">Research</h2>
             <div class="research-grid" id="researchGrid">
-                <div class="research-card">
-                    <div class="research-content">
-                        <h3 class="research-title">Intrinsic vs. Explicit Feedback in Interactive Reinforcement Learning</h3>
-                        <p class="research-venue">Undergraduate Honors Researcher | Advisor: Dr. Minwoo Lee</p>
-                        <p class="research-year">Dec 2024 - Present</p>
-                        <ul class="research-description">
-                            <li>Engineered and optimized reinforcement learning agents to compare between intrinsic motivation and explicit human feedback mechanisms in interactive environments.</li>
-                            <li>Developed experimental frameworks to evaluate learning adaptability and goal alignment for agents and human collaborators.</li>
-                            <li>Collaborated on integrating BCI EEG signals using OpenBCI and BrainFlow to analyze intrinsic feedback dynamics and their impact on agent learning.</li>
-                        </ul>
+                <!-- Research Card 1 - Most Recent -->
+                <div class="research-card" data-research-id="1">
+                    <div class="research-image-wrapper">
+                        <img src="assets/research/ai-accountability.png" alt="AI Accountability Research" class="research-image" onerror="this.src='assets/projects/project-placeholder.jpg'">
+                        <div class="research-date-badge">Aug 2025 - Present</div>
                     </div>
-                </div>
-                <div class="research-card">
                     <div class="research-content">
                         <h3 class="research-title">AI Algorithms, Domains, and Accountability</h3>
-                        <p class="research-venue">Undergraduate Researcher | Advisor: Dr. Divya Ramesh</p>
-                        <p class="research-year">Aug 2025 - Present</p>
-                        <ul class="research-description">
-                            <li>Analyzed how algorithmic structures influence model accountability across various AI application domains.</li>
-                            <li>Designed a taxonomy linking model characteristics to transparency and ethical governance frameworks.</li>
-                            <li>Proposed auditing strategies to enhance interpretability, fairness, and accountability in AI systems.</li>
-                        </ul>
+                        <p class="research-advisor">Advisor: Dr. Divya Ramesh</p>
+                        <div class="research-details">
+                            <ul class="research-description">
+                                <li>Analyzed how algorithmic structures influence model accountability across various AI application domains.</li>
+                                <li>Designed a taxonomy linking model characteristics to transparency and ethical governance frameworks.</li>
+                                <li>Proposed auditing strategies to enhance interpretability, fairness, and accountability in AI systems.</li>
+                            </ul>
+                        </div>
+                        <button class="research-expand-btn">
+                            <span class="expand-text">Read More</span>
+                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="research-card">
+
+                <!-- Research Card 2 -->
+                <div class="research-card" data-research-id="2">
+                    <div class="research-image-wrapper">
+                        <img src="assets/research/rl-feedback.png" alt="Reinforcement Learning Research" class="research-image" onerror="this.src='assets/projects/project-placeholder.jpg'">
+                        <div class="research-date-badge">Dec 2024 - Present</div>
+                    </div>
+                    <div class="research-content">
+                        <h3 class="research-title">Intrinsic vs. Explicit Feedback in Interactive Reinforcement Learning</h3>
+                        <p class="research-advisor">Advisor: Dr. Minwoo Lee</p>
+                        <div class="research-details">
+                            <ul class="research-description">
+                                <li>Engineered and optimized reinforcement learning agents to compare between intrinsic motivation and explicit human feedback mechanisms in interactive environments.</li>
+                                <li>Developed experimental frameworks to evaluate learning adaptability and goal alignment for agents and human collaborators.</li>
+                                <li>Collaborated on integrating BCI EEG signals using OpenBCI and BrainFlow to analyze intrinsic feedback dynamics and their impact on agent learning.</li>
+                            </ul>
+                        </div>
+                        <button class="research-expand-btn">
+                            <span class="expand-text">Read More</span>
+                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Research Card 3 -->
+                <div class="research-card" data-research-id="3">
+                    <div class="research-image-wrapper">
+                        <img src="assets/research/llm-authenticity.png" alt="LLM Authenticity Research" class="research-image" onerror="this.src='assets/projects/project-placeholder.jpg'">
+                        <div class="research-date-badge">Jan 2025 - Jun 2025</div>
+                    </div>
                     <div class="research-content">
                         <h3 class="research-title">Exploring Relational Authenticity of LLMs for Human-AI Interaction</h3>
-                        <p class="research-venue">Undergraduate Honors Researcher | Advisor: Dr. Elizabeth Johnson</p>
-                        <p class="research-year">Jan 2025 - Jun 2025</p>
-                        <ul class="research-description">
-                            <li>Explored emotional reciprocity and temporal context maintenance in large language models through structured human-AI dialogues.</li>
-                            <li>Conducted sentiment analysis and thematic coding to evaluate relational authenticity of various commercial models.</li>
-                            <li>Developed a comparative framework to assess how model architecture and training paradigms influence affective alignment and long-term conversational coherence.</li>
-                        </ul>
+                        <p class="research-advisor">Advisor: Dr. Elizabeth Johnson</p>
+                        <div class="research-details">
+                            <ul class="research-description">
+                                <li>Explored emotional reciprocity and temporal context maintenance in large language models through structured human-AI dialogues.</li>
+                                <li>Conducted sentiment analysis and thematic coding to evaluate relational authenticity of various commercial models.</li>
+                                <li>Developed a comparative framework to assess how model architecture and training paradigms influence affective alignment and long-term conversational coherence.</li>
+                            </ul>
+                        </div>
+                        <button class="research-expand-btn">
+                            <span class="expand-text">Read More</span>
+                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -339,6 +377,109 @@
     <div class="organizations-ticker">
         <div class="ticker-wrapper">
             <div class="ticker-content">
+                <!-- Set 1 -->
+                <div class="ticker-item">
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
+                    <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
+                    <span>ACM (Association for Computing Machinery)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
+                    <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
+                    <span>Phi Kappa Phi Honor Society</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
+                    <span>CCI Student Council</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
+                    <span>Gold Rush Robotics</span>
+                </div>
+                
+                <!-- Set 2 -->
+                <div class="ticker-item">
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
+                    <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
+                    <span>ACM (Association for Computing Machinery)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
+                    <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
+                    <span>Phi Kappa Phi Honor Society</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
+                    <span>CCI Student Council</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
+                    <span>Gold Rush Robotics</span>
+                </div>
+                
+                <!-- Set 3 -->
+                <div class="ticker-item">
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
+                    <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
+                    <span>ACM (Association for Computing Machinery)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
+                    <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
+                    <span>Phi Kappa Phi Honor Society</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
+                    <span>CCI Student Council</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
+                    <span>Gold Rush Robotics</span>
+                </div>
+                
+                <!-- Set 4 -->
                 <div class="ticker-item">
                     <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
                     <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
