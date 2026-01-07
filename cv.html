@@ -22,7 +22,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 100px 2rem 4rem;
+            padding: 100px 2rem 2.5rem;
         }
         
         .cv-container {
@@ -32,7 +32,8 @@
         }
         
         .cv-header {
-            margin-bottom: 3rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
         }
         
         .cv-title {
@@ -160,7 +161,12 @@
                 </svg>
             </button>
             <a href="index.html" class="nav-logo">ADS</a>
-            <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+            <a href="index.html" class="btn btn-secondary" aria-label="Back to Home">
+                <svg class="left-arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
         </div>
     </nav>
 
@@ -169,7 +175,6 @@
         <div class="cv-container">
             <div class="cv-header">
                 <h1 class="cv-title">Curriculum Vitae</h1>
-                <p class="cv-subtitle">Ajay D. Sudhir - AI Researcher & Computer Scientist</p>
             </div>
 
             <div class="cv-viewer">
@@ -199,10 +204,6 @@
                     Open in New Tab
                 </a>
             </div>
-
-            <div class="cv-note">
-                <p><strong>Note:</strong> If the PDF doesn't display properly, please use the download button above or open in a new tab.</p>
-            </div>
         </div>
     </section>
 
@@ -210,6 +211,7 @@
     <div class="organizations-ticker">
         <div class="ticker-wrapper">
             <div class="ticker-content">
+                <!-- Set 1 -->
                 <div class="ticker-item">
                     <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
                     <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
@@ -219,7 +221,7 @@
                     <span>ACM (Association for Computing Machinery)</span>
                 </div>
                 <div class="ticker-item">
-                    <img src="assets/organizations/images.png" alt="AAAI" class="ticker-logo">
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
                     <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
                 </div>
                 <div class="ticker-item">
@@ -228,23 +230,58 @@
                 </div>
                 <div class="ticker-item">
                     <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
-                    <span>National Society for Leadership and Success</span>
+                    <span>NSLS (National Society for Leadership and Success)</span>
                 </div>
                 <div class="ticker-item">
                     <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
-                    <span>Charlotte AI Research (CAIR)</span>
+                    <span>CAIR (Charlotte AI Research)</span>
                 </div>
                 <div class="ticker-item">
                     <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
                     <span>CCI Student Council</span>
                 </div>
                 <div class="ticker-item">
-                    <img src="assets/organizations/logo.svg" alt="Gold Rush Robotics" class="ticker-logo">
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
+                    <span>Gold Rush Robotics</span>
+                </div>
+                
+                <!-- Set 2 -->
+                <div class="ticker-item">
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
+                    <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
+                    <span>ACM (Association for Computing Machinery)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
+                    <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
+                    <span>Phi Kappa Phi Honor Society</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
+                    <span>CCI Student Council</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
                     <span>Gold Rush Robotics</span>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer class="footer">
