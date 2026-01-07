@@ -48,7 +48,6 @@
             </button>
             <a href="#home" class="nav-logo">ADS</a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About Me</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
@@ -109,12 +108,6 @@
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <span>Scroll</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </div>
         </div>
     </section>
 
@@ -127,32 +120,65 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
+                    <div class="about-intro-section">
+                        <p class="about-intro">I am a passionate AI researcher and computer science student at UNC Charlotte, specializing in neuro-symbolic cognitive architectures and human-AI interaction. My work focuses on bridging the gap between symbolic reasoning and neural learning to create more intelligent and adaptable AI systems.</p>
+                    </div>
+                    
                     <div class="education-section">
                         <h3 class="subsection-title">Education</h3>
                         <div class="education-item">
-                            <p><strong>B.S. Computer Science - Artificial Intelligence, Robotics, and Gaming</strong></p>
-                            <p><strong>Minors:</strong> Electrical Engineering, Mathematics, and Statistics</p>
-                            <p>University of North Carolina at Charlotte</p>
-                            <p>Expected Graduation: May 2026 | GPA: 4.0/4.0</p>
-                            <p><strong>Honors:</strong> University Honors Program, College of Computing and Informatics Honors</p>
+                            <p class="education-degree"><strong>B.S. Computer Science - AI, Robotics, and Gaming</strong></p>
+                            <p class="education-details"><strong>Minors:</strong> Electrical Engineering, Mathematics, and Statistics</p>
+                            <p class="education-honors"><strong>Honors:</strong> University Honors Program, College of Computing and Informatics Honors</p>
+                            <p class="education-graduation" style="display: flex; justify-content: space-between;">
+                                <span><strong>Graduation:</strong> May 2026</span>
+                                <span><strong>GPA:</strong> 4.0/4.0</span>
+                            </p>
                         </div>
                     </div>
-                    <p class="about-intro">
-                        My research interests encompass <strong>Neuro-Symbolic Cognitive Meta-Learning systems</strong> which can learn continually, reason adaptively, and generalize across many domains through <strong>intrinsic curiosity</strong> and <strong>human feedback</strong>.
-                    </p>
-                    <p class="about-description">
-                        I aim to integrate neurocognitive architectures into current models to improve the theoretical and <strong>algorithmic foundations</strong> that enable efficient exploration, adaptive decision-making, and human-like <strong>lifelong learning</strong> for <strong>safe autonomy</strong> in complex real-world environments.
-                    </p>
-                </div>
+                </div>   
                 <div class="research-interests">
                     <h3 class="subsection-title">Research Interests</h3>
                     <ul class="interests-list">
                         <li class="interest-item"><span class="interest-icon">🧠</span>Neuro-Symbolic Cognitive Architectures</li>
                         <li class="interest-item"><span class="interest-icon">🧮</span>Lifelong, Continual, and Meta-Learning</li>
-                        <li class="interest-item"><span class="interest-icon">🎯</span>Exploration–Exploitation in Reinforcement Learning</li>
+                        <li class="interest-item"><span class="interest-icon">🎯</span>Exploration-Exploitation in Reinforcement Learning</li>
                         <li class="interest-item"><span class="interest-icon">🤝</span>Human-in-the-Loop and Feedback-Driven AI Systems</li>
-                        <li class="interest-item"><span class="interest-icon">🌍</span>Safe, Explainable, and Ethical Autonomous Agents</li>
+                        <li class="interest-item"><span class="interest-icon">🤖</span>Safe, Explainable, and Ethical Autonomous Agents</li>
                     </ul>
+                </div>
+                <div class="fun-facts-section">
+                    <h3 class="subsection-title">Fun Facts</h3>
+                    <div class="fun-facts-grid">
+                        <div class="fun-fact-item">
+                            <span class="fun-fact-icon">🌍</span>
+                            <div class="fun-fact-content">
+                                <h4>Multicultural Background</h4>
+                                <p>I have lived most of my life in India and America. I speak <strong>English, Hindi, Malayalam, and Tamil</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="fun-fact-item">
+                            <span class="fun-fact-icon">🏎️</span>
+                            <div class="fun-fact-content">
+                                <h4>Sports Enthusiast</h4>
+                                <p>I love watching <strong>Formula 1, Soccer, and Basketball</strong>. There's nothing like the thrill of competition!</p>
+                            </div>
+                        </div>
+                        <div class="fun-fact-item">
+                            <span class="fun-fact-icon">📺</span>
+                            <div class="fun-fact-content">
+                                <h4>Entertainment Preferences</h4>
+                                <p>Favorite series: <strong>Sherlock Holmes, Friends, and Money Heist</strong></p>
+                            </div>
+                        </div>
+                        <div class="fun-fact-item">
+                            <span class="fun-fact-icon">🎬</span>
+                            <div class="fun-fact-content">
+                                <h4>Cinematic Taste</h4>
+                                <p>Favorite movies: <strong>The Dark Knight, Interstellar, and Inception</strong></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,40 +245,78 @@
         <div class="container">
             <h2 class="section-title">Research</h2>
             <div class="research-grid" id="researchGrid">
-                <div class="research-card">
-                    <div class="research-content">
-                        <h3 class="research-title">Intrinsic vs. Explicit Feedback in Interactive Reinforcement Learning</h3>
-                        <p class="research-venue">Undergraduate Honors Researcher | Advisor: Dr. Minwoo Lee</p>
-                        <p class="research-year">December 2024 – Present</p>
-                        <ul class="research-description">
-                            <li>Engineered and optimized reinforcement learning agents to compare between intrinsic motivation and explicit human feedback mechanisms in interactive environments.</li>
-                            <li>Developed experimental frameworks to evaluate learning adaptability and goal alignment for agents and human collaborators.</li>
-                            <li>Collaborated on integrating BCI EEG signals using OpenBCI and BrainFlow to analyze intrinsic feedback dynamics and their impact on agent learning.</li>
-                        </ul>
+                <!-- Research Card 1 - Most Recent -->
+                <div class="research-card" data-research-id="1">
+                    <div class="research-image-wrapper">
+                        <img src="assets/research/ai-accountability.png" alt="AI Accountability Research" class="research-image" onerror="this.src='assets/projects/project-placeholder.jpg'">
+                        <div class="research-date-badge">Aug 2025 - Present</div>
                     </div>
-                </div>
-                <div class="research-card">
                     <div class="research-content">
                         <h3 class="research-title">AI Algorithms, Domains, and Accountability</h3>
-                        <p class="research-venue">Undergraduate Researcher | Advisor: Dr. Divya Ramesh</p>
-                        <p class="research-year">August 2025 – Present</p>
-                        <ul class="research-description">
-                            <li>Analyzed how algorithmic structures influence model accountability across various AI application domains.</li>
-                            <li>Designed a taxonomy linking model characteristics to transparency and ethical governance frameworks.</li>
-                            <li>Proposed auditing strategies to enhance interpretability, fairness, and accountability in AI systems.</li>
-                        </ul>
+                        <p class="research-advisor">Advisor: Dr. Divya Ramesh</p>
+                        <div class="research-details">
+                            <ul class="research-description">
+                                <li>Analyzed how algorithmic structures influence model accountability across various AI application domains.</li>
+                                <li>Designed a taxonomy linking model characteristics to transparency and ethical governance frameworks.</li>
+                                <li>Proposed auditing strategies to enhance interpretability, fairness, and accountability in AI systems.</li>
+                            </ul>
+                        </div>
+                        <button class="research-expand-btn">
+                            <span class="expand-text">Read More</span>
+                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="research-card">
+
+                <!-- Research Card 2 -->
+                <div class="research-card" data-research-id="2">
+                    <div class="research-image-wrapper">
+                        <img src="assets/research/rl-feedback.png" alt="Reinforcement Learning Research" class="research-image" onerror="this.src='assets/projects/project-placeholder.jpg'">
+                        <div class="research-date-badge">Dec 2024 - Present</div>
+                    </div>
+                    <div class="research-content">
+                        <h3 class="research-title">Intrinsic vs. Explicit Feedback in Interactive Reinforcement Learning</h3>
+                        <p class="research-advisor">Advisor: Dr. Minwoo Lee</p>
+                        <div class="research-details">
+                            <ul class="research-description">
+                                <li>Engineered and optimized reinforcement learning agents to compare between intrinsic motivation and explicit human feedback mechanisms in interactive environments.</li>
+                                <li>Developed experimental frameworks to evaluate learning adaptability and goal alignment for agents and human collaborators.</li>
+                                <li>Collaborated on integrating BCI EEG signals using OpenBCI and BrainFlow to analyze intrinsic feedback dynamics and their impact on agent learning.</li>
+                            </ul>
+                        </div>
+                        <button class="research-expand-btn">
+                            <span class="expand-text">Read More</span>
+                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Research Card 3 -->
+                <div class="research-card" data-research-id="3">
+                    <div class="research-image-wrapper">
+                        <img src="assets/research/llm-authenticity.png" alt="LLM Authenticity Research" class="research-image" onerror="this.src='assets/projects/project-placeholder.jpg'">
+                        <div class="research-date-badge">Jan 2025 - Jun 2025</div>
+                    </div>
                     <div class="research-content">
                         <h3 class="research-title">Exploring Relational Authenticity of LLMs for Human-AI Interaction</h3>
-                        <p class="research-venue">Undergraduate Honors Researcher | Advisor: Dr. Elizabeth Johnson</p>
-                        <p class="research-year">January 2025 – June 2025</p>
-                        <ul class="research-description">
-                            <li>Explored emotional reciprocity and temporal context maintenance in large language models through structured human-AI dialogues.</li>
-                            <li>Conducted sentiment analysis and thematic coding to evaluate relational authenticity of various commercial models.</li>
-                            <li>Developed a comparative framework to assess how model architecture and training paradigms influence affective alignment and long-term conversational coherence.</li>
-                        </ul>
+                        <p class="research-advisor">Advisor: Dr. Elizabeth Johnson</p>
+                        <div class="research-details">
+                            <ul class="research-description">
+                                <li>Explored emotional reciprocity and temporal context maintenance in large language models through structured human-AI dialogues.</li>
+                                <li>Conducted sentiment analysis and thematic coding to evaluate relational authenticity of various commercial models.</li>
+                                <li>Developed a comparative framework to assess how model architecture and training paradigms influence affective alignment and long-term conversational coherence.</li>
+                            </ul>
+                        </div>
+                        <button class="research-expand-btn">
+                            <span class="expand-text">Read More</span>
+                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -271,7 +335,6 @@
                     <div class="publication-content">
                         <h3 class="publication-title">The Feel of Friendship: Emotional Presence and Relational Authenticity in Large Language Models</h3>
                         <p class="research-venue">Johnson, L., Sudhir, A. D., & Padmapriya, A. A.</p>
-                        <p class="research-year">2025</p>
                         <p class="publication-description"><em>International Journal of Humanities and Social Science, 15</em>, 329-339.</p>
                         <a href="https://doi.org/10.30845/ijhss.vol15p29" target="_blank" rel="noopener noreferrer" class="research-link">
                             View Publication
@@ -300,10 +363,6 @@
             <div class="section-cta">
                 <a href="#blog" class="btn btn-outline">
                     View All Posts
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
                 </a>
             </div>
         </div>
@@ -313,115 +372,140 @@
     <div class="organizations-ticker">
         <div class="ticker-wrapper">
             <div class="ticker-content">
+                <!-- Set 1 -->
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
                     <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
                     <span>ACM (Association for Computing Machinery)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
                     <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
                     <span>Phi Kappa Phi Honor Society</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    <span>National Society for Leadership and Success</span>
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    <span>Charlotte AI Research (CAIR)</span>
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
                     <span>CCI Student Council</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
                     <span>Gold Rush Robotics</span>
                 </div>
+                
+                <!-- Set 2 -->
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    <span>Charlotte ML Lab (CharMLab)</span>
-                </div>
-            </div>
-            <div class="ticker-content" aria-hidden="true">
-                <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
                     <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
                     <span>ACM (Association for Computing Machinery)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
                     <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
                     <span>Phi Kappa Phi Honor Society</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    <span>National Society for Leadership and Success</span>
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    <span>Charlotte AI Research (CAIR)</span>
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
                     <span>CCI Student Council</span>
                 </div>
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
                     <span>Gold Rush Robotics</span>
                 </div>
+                
+                <!-- Set 3 -->
                 <div class="ticker-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    <span>Charlotte ML Lab (CharMLab)</span>
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
+                    <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
+                    <span>ACM (Association for Computing Machinery)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
+                    <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
+                    <span>Phi Kappa Phi Honor Society</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
+                    <span>CCI Student Council</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
+                    <span>Gold Rush Robotics</span>
+                </div>
+                
+                <!-- Set 4 -->
+                <div class="ticker-item">
+                    <img src="assets/organizations/ieee_logo_icon_169992.png" alt="IEEE" class="ticker-logo">
+                    <span>IEEE (Institute of Electrical and Electronics Engineers)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/acm.png" alt="ACM" class="ticker-logo">
+                    <span>ACM (Association for Computing Machinery)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/aaai.png" alt="AAAI" class="ticker-logo">
+                    <span>AAAI (Association for the Advancement of Artificial Intelligence)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/PKP_CIRCLE.png" alt="Phi Kappa Phi" class="ticker-logo">
+                    <span>Phi Kappa Phi Honor Society</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/NSLS_Logo_750px.webp" alt="NSLS" class="ticker-logo">
+                    <span>NSLS (National Society for Leadership and Success)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/cair.png" alt="CAIR" class="ticker-logo">
+                    <span>CAIR (Charlotte AI Research)</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/CCIStudentCouncil.png" alt="CCI Student Council" class="ticker-logo">
+                    <span>CCI Student Council</span>
+                </div>
+                <div class="ticker-item">
+                    <img src="assets/organizations/GRR.png" alt="Gold Rush Robotics" class="ticker-logo">
+                    <span>Gold Rush Robotics</span>
                 </div>
             </div>
         </div>
@@ -432,7 +516,7 @@
         <div class="container">
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    &copy; 2025 Ajay D. Sudhir. All rights reserved.
+                    &copy; 2026 Ajay D. Sudhir. All rights reserved.
                 </p>
                 <div class="footer-social">
                     <a href="https://github.com/ajaydsudhir" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">

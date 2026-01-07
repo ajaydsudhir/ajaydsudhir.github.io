@@ -2,10 +2,10 @@
   "posts": [
     {
       "title": "Understanding Neuro-Symbolic AI: Bridging Logic and Learning",
-      "excerpt": "Exploring how neuro-symbolic approaches combine the strengths of neural networks and symbolic reasoning to create more interpretable and robust AI systems.",
+      "excerpt": "Exploring how neuro-symbolic approaches combine the strengths of neural networks and symbolic reasoning to create more interpretable AI systems.",
       "date": "2024-11-15",
       "readingTime": "8 min",
-      "tags": ["AI Research", "Neuro-Symbolic", "Machine Learning"],
+      "tags": ["Neuro-Symbolic", "Machine Learning"],
       "slug": "neuro-symbolic-ai-introduction"
     },
     {
@@ -13,7 +13,7 @@
       "excerpt": "A deep dive into continual learning techniques and how they enable AI systems to acquire new knowledge while retaining previous learnings.",
       "date": "2024-11-01",
       "readingTime": "10 min",
-      "tags": ["Continual Learning", "AI Research", "Deep Learning"],
+      "tags": ["Continual Learning", "Deep Learning"],
       "slug": "continual-learning-overview"
     },
     {
@@ -21,7 +21,7 @@
       "excerpt": "Understanding the fundamental trade-off in RL and modern approaches to balance exploration and exploitation for optimal agent performance.",
       "date": "2024-10-20",
       "readingTime": "12 min",
-      "tags": ["Reinforcement Learning", "AI Research", "Optimization"],
+      "tags": ["Reinforcement Learning", "Optimization"],
       "slug": "exploration-exploitation-rl"
     }
   ]
